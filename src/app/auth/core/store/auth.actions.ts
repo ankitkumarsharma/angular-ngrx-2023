@@ -15,3 +15,6 @@ export const loginErrorAction = createAction(
   '[Auth] login response error action',
   props<{error: string}>()
 );
+
+export const resetState = createAction('CLEAR_STATE');
+export const logout = createAction('LOG_OUT');

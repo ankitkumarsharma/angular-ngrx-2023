@@ -1,27 +1,39 @@
-<div class="login-box">
-  <div class="login-form">
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <div class="row form-group">
-        <div class="col-4">
-          <label for="">User Name</label>
-        </div>
-        <div class="col-8">
-          <input type="text" formControlName="email" class="form-control">
-        </div>
+<div class="login-block">
+  <div class="card">
+      <div class="card-body">
+        <h4 class="ak-sub-title">Login Form</h4>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+          <div class="form-group row">
+            <label class="col-md-3">User Name</label>
+            <div class="col-md-5">
+              <input [ngClass]="{'is-invalid': loginFormError('username')}" type="text" class="form-control" formControlName="username">
+              <div *ngIf="loginFormError('username')">
+                <span *ngIf="loginFormError('username',true)" class="error">This field is required.</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3">Password</label>
+            <div class="col-md-5">
+              <input [ngClass]="{'is-invalid': loginFormError('password')}" type="password" class="form-control" formControlName="password">
+              <div *ngIf="loginFormError('password')">
+                <span *ngIf="loginFormError('password',true)" class="error">This field is required.</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <button type="submit" class="primary-btn">Submit</button>
+                </li>
+                <li class="list-inline-item">
+                  <button type="button" (click)="resetForm()" class="secondary-btn">Reset</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
       </div>
-      <div class="row form-group">
-        <div class="col-4">
-          <label for="">User Password</label>
-        </div>
-        <div class="col-8">
-          <input type="password" formControlName="password" class="form-control">
-        </div>
-      </div>
-      <div class="row form-group">
-        <div class="col">
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-      </div>
-    </form>
-  </div>
+    </div>
 </div>
