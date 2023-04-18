@@ -2,6 +2,7 @@ import { createReducer, on } from "@ngrx/store";
 import { State } from "src/app/core/model/app.model";
 import * as AuthAction from "./auth.actions"
 
+export const authKey="auth";
 export const initialState: State = {
   token: null,
   user: null,
