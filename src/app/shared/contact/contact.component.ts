@@ -1,4 +1,4 @@
-import { logout } from './../../auth/core/actions/auth.actions';
+import { logout } from '../../auth/core/store/auth.actions';
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 

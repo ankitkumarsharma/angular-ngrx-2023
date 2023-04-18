@@ -10,10 +10,12 @@ import { appReducer, metaReducers } from './core/store/app.reducers';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Effects } from './core/store/app.effects';
+import { ContactComponent } from './shared/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

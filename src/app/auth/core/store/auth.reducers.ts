@@ -30,6 +30,11 @@ const _authReducer = createReducer(
       isAuth: false
     }
   }),
+  on(AuthAction.resetLoginAction, (state)=>{
+    return {
+        ...initialState
+    }
+})
 )
 
 export function authReducer(state:any, action:any){
