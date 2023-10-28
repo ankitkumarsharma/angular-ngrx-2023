@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="login-block">
+                <div class="card">
+                    <div class="card-body">
+                      <h4 class="ak-sub-title">Login Form</h4>
+                      <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+                        <div class="form-group row">
+                          <label class="col-md-3">User Name</label>
+                          <div class="col-md-5">
+                            <input [ngClass]="{'is-invalid': submitted && fc.username.errors}" type="text" class="form-control" formControlName="username">
+                            <div *ngIf="submitted && fc.username.errors">
+                              <span *ngIf="submitted && fc.username.errors?.required" class="error">This field is required.</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-md-3">Password</label>
+                          <div class="col-md-5">
+                            <input [ngClass]="{'is-invalid': submitted && fc.password.errors}" type="password" class="form-control" formControlName="password">
+                            <div *ngIf="submitted && fc.password.errors">
+                              <span *ngIf="submitted && fc.password.errors?.required" class="error">This field is required.</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <ul class="list-inline">
+                              <li class="list-inline-item">
+                                <button type="submit" class="primary-btn">Submit</button>
+                              </li>
+                              <li class="list-inline-item">
+                                <button type="button" (click)="resetForm()" class="secondary-btn">Reset</button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

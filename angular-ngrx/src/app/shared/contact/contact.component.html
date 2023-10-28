@@ -1,0 +1,11 @@
+<div class="space-20"></div>
+<h2 class="ak-sub-title">For more info, contact us</h2>
+<table class="ak-para">
+  <tr class="row">
+    <td *ngFor="let item of contactInfo" class="col-xs-6 col-md-4">
+      {{item.name}} <span *ngIf="item.value">: </span> <a [href]="item.url">{{item.value}}</a>
+    </td>
+  </tr>
+</table>
+<button routerLink="/" class="sm-btn">Home</button>
+<hr>

@@ -1,6 +1,15 @@
-# AngularNgrx2023
+# angular-ngrx
+NgRx | Angular | State Management | Interceptors | Global Loader | Global Error Handling
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.
+## Information About Project
+In this repo, I created 3 different folder with ngRx functionality, all have basic and advance level functionality, also with interceptors, global error handling part and loader part implementation.
+
+So we can learn all topics with these 3 project. I also wrote one blog for same understanding with ngrx, please check my blog on medium [Medium Blog](https://medium.com/stackademic/how-to-implement-ngrx-store-in-angular-apps-1129c7360c8c) , also if you like my blog, please clapped my blog and follow me on medium.
+Thanks
+
+## Contact Details
+If you want to connect with me, please go with my website, 
+[www.ankitkumarsharma.com](https://www.ankitkumarsharma.com/)
 
 ## Development server
 
